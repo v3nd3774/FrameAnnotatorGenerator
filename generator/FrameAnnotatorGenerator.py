@@ -1,4 +1,5 @@
 import os
+import pytz
 import nltk
 from datetime import datetime
 from jinja2 import Environment, select_autoescape
@@ -10,7 +11,7 @@ TEMPLATE = """
           <document description="Generated User Input" name="Generated User Input" ID="0"/>
         </corpus>
       </header>
-      {% for sentence in sentence_tuples %}
+      {%- for sentence in sentence_tuples %}
       <sentence corpID="0" docID="0" sentNo="{{sentence[0]}}" paragNo="1" aPos="0" ID="{{sentence[0]}}">
         <text>{{sentence[1]}}</text>
         <annotationSet cDate="{{now}}" status="UNANN" ID="{{sentence[0]}}">
@@ -19,7 +20,7 @@ TEMPLATE = """
           <layer rank="1" name="WSL"/>
         </annotationSet>
       </sentence>
-      {% endfor %}
+      {%- endfor %}
     </fullTextAnnotation>
 """.strip()
 template = Environment(autoescape=select_autoescape(["xml"])).from_string(TEMPLATE)
@@ -34,5 +35,5 @@ class FrameAnnotatorGenerator(object):
         sentences = nltk.sent_tokenize(input_text)
         sentence_tuples = [(idx + 1, sent) for idx, sent in enumerate(sentences)]
         template_vars = {"sentence_tuples":sentence_tuples,
-                         "now":datetime.now().strftime("%m/%d/%Y %H:%M:%S %Z %a")}
+                         "now":datetime.now(pytz.utc).strftime("%m/%d/%Y %H:%M:%S %Z %a")}
         return template.render(**template_vars)

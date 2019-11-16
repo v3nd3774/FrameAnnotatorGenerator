@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r requirements.txt && ./build_and_local_install.sh
+script:
+  - py.test
+  - fig --source tests/data/paragraph_input.txt --target test.xml

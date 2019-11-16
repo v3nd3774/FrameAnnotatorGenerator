@@ -11,6 +11,7 @@ setuptools.setup(
   long_description_content_type="text/markdown",
   url="https://github.com/v3nd3774/FrameAnnotatorGenerator",
   packages=setuptools.find_packages(),
+  entry_points={'console_scripts':["fig=generator:CLI.main"]},
   classifiers=[
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
