@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fullTextAnnotation xsi:schemaLocation="../schema/fullText.xsd" xmlns="http://framenet.icsi.berkeley.edu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<header> 
+		<corpus description="Generated User Input" name="Generated User Input" ID="0"> 
+			<document description="Generated User Input" name="Generated User Input" ID="0"/> 
+		</corpus> 
+	</header> 
+	<sentence corpID="0" docID="0" sentNo="1" paragNo="1" aPos="0" ID="1">
+		<text>Canadian-born Ted Cruz has had a double passport.</text>
+		<annotationSet cDate="07/22/2019 04:00:00 CDT Mon" status="UNANN" ID="1">
+      <layer rank="1" name="PENN"/>
+			<layer rank="1" name="NER"/>
+			<layer rank="1" name="WSL"/>
+		</annotationSet>
+	</sentence>
+</fullTextAnnotation>

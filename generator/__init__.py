@@ -1,0 +1,1 @@
+from .FrameAnnotatorGenerator import FrameAnnotatorGenerator

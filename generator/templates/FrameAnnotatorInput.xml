@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<fullTextAnnotation xsi:schemaLocation="../schema/fullText.xsd" xmlns="http://framenet.icsi.berkeley.edu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<header> 
+		<corpus description="Generated User Input" name="Generated User Input" ID="0"> 
+			<document description="Generated User Input" name="Generated User Input" ID="0"/> 
+		</corpus> 
+	</header> 
+  {% for sentence in sentences %}
+  <sentence corpID="0" docID="0" sentNo="{{sentence[0]}}" paragNo="1" aPos="0" ID="{{sentence[0]}}">
+    <text>{{sentence[1]}}</text>
+    <annotationSet cDate="{{now}}" status="UNANN" ID="1">
+      <layer rank="1" name="PENN"/>
+			<layer rank="1" name="NER"/>
+			<layer rank="1" name="WSL"/>
+		</annotationSet>
+	</sentence>
+  {% endfor %}
+</fullTextAnnotation>
