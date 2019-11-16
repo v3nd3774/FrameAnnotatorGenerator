@@ -6,3 +6,7 @@ install:
 script:
   - py.test
   - fig --source tests/data/paragraph_input.txt --target test.xml
+  - echo "Input Data:"
+  - cat tests/data/paragraph_input.txt 
+  - echo "Output Data:"
+  - cat test.xml
