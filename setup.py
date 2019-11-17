@@ -3,7 +3,7 @@ with open("README.md", "r") as f:
   long_description = f.read()
 setuptools.setup(
   name="frame-annotator-generator-v3nd3774",
-  version="0.0.1",
+  version="0.0.8",
   author="Josue Caraballo",
   author_email="josue.caraballo@gmail.com",
   description="Generates input XMLs for IDIRLab FrameAnnotator web application.",
