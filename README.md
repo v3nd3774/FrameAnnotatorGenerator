@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/v3nd3774/FrameAnnotatorGenerator.svg?branch=master)](https://travis-ci.org/v3nd3774/FrameAnnotatorGenerator)
 
 # FrameAnnotatorGenerator
-Repository to store generator for input XML files for IDIRLab FrameAnnotator.
+Repository to store generator for input XML files for [IDIRLab FrameAnnotator](https://idir.uta.edu/frameannotator/).
+The full paper for FrameAnnotator is [here](https://rc.library.uta.edu/uta-ir/bitstream/handle/10106/28142/ROY-THESIS-2019.pdf?sequence=1&isAllowed=y).
 
 # How to uninstall?
 
