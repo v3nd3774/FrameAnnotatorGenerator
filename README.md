@@ -15,7 +15,7 @@ pip uninstall frame-annotator-generator-v3nd3774
 WIP [on Test PyPi](https://test.pypi.org/project/frame-annotator-generator-v3nd3774/) right now. To install:
 
 ```
-pip install -i https://test.pypi.org/simple/ frame-annotator-generator-v3nd3774
+pip install --extra-index-url https://test.pypi.org/simple/ frame-annotator-generator-v3nd3774
 ```
 
 # How do I use it?
