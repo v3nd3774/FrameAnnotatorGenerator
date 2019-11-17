@@ -3,7 +3,7 @@ with open("README.md", "r") as f:
   long_description = f.read()
 setuptools.setup(
   name="frame-annotator-generator-v3nd3774",
-  version="0.0.8",
+  version="0.0.10",
   author="Josue Caraballo",
   author_email="josue.caraballo@gmail.com",
   description="Generates input XMLs for IDIRLab FrameAnnotator web application.",
@@ -12,6 +12,11 @@ setuptools.setup(
   url="https://github.com/v3nd3774/FrameAnnotatorGenerator",
   packages=setuptools.find_packages(),
   entry_points={'console_scripts':["fig=generator:CLI.main"]},
+  install_requires = ["nltk",
+                      "Jinja2",
+                      "xmldiff",
+                      "click",
+                      "pytz"],
   classifiers=[
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
